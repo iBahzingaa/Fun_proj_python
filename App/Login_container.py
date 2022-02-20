@@ -1,5 +1,5 @@
 import tkinter as tk  # imported gui framework
-
+from Checklist_page_container import checklist_screen
 
 # Prüft das eingegebene Passwort und den Username.
 # Gibt eine Message aus, je nachdem ob alle Felder gefüllt wurden, die Daten richtig oder falsch sind.
@@ -14,13 +14,14 @@ def login():
     else:
         if uname == "admin" and pwd == "admin":
             message.set("Login erfolgreich")
+            checklist_screen()
         else:
             message.set("Falsches Passwort oder Username.")
 
 
 # Login Funktion.
 # Gui für das Login Fenster wird aufgebaut.
-def loginform():
+def loginForm():
     global login_screen
     login_screen = tk.Tk()
 
@@ -57,4 +58,4 @@ def loginform():
 
 
 # calling function Loginform
-loginform()
+loginForm()
